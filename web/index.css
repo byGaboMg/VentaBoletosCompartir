@@ -88,7 +88,6 @@ header li a {
 }
 
 .ttt {
-    text-height: 40px;
     background-size: cover;
     font-family: sans-serif;
     color: white;
@@ -113,7 +112,7 @@ header li a {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 20px;
   color: var(--color-text);
   background: var(--color-background);
   transition: 1s;
@@ -204,11 +203,16 @@ header li a {
 }
 
 
+.contcarru {
+  overflow: hidden; /* Oculta la barra de desplazamiento */
+}
+
 .cards {
   display: flex;
   flex-direction: row;
   gap: 15px;
   padding-top: 40px;
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
 }
 
 .cards .red {
@@ -224,6 +228,7 @@ header li a {
 }
 
 .cards .card {
+  animation: slide 10s infinite linear;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,6 +240,13 @@ header li a {
   color: white;
   cursor: pointer;
   transition: 400ms;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33.33% { transform: translateX(-100%); }
+  66.66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
 }
 
 .cards .card p.tip {
@@ -262,6 +274,36 @@ header li a {
 }
 
 .ev1 {
-    height: 100%;
-    width: 100%;
+    height: 300px;
+    width: 300px;
+}
+
+.prev-btn,
+.next-btn {
+    background-color: #780000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.prev-btn {
+    margin-right: 10px;
+}
+
+.next-btn:hover,
+.prev-btn:hover {
+    background-color: #a00000;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-info {
+  font-size: 14px;
+  color: #333;
 }
