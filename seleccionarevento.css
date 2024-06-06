@@ -1,0 +1,266 @@
+/* Estilos existentes */
+header img {
+    height: 50px;
+    margin-left: 40px;
+}
+
+body {
+    height: 125vh;
+    background-image: url('https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    margin-top: 80px;
+    padding: 30px;
+    color: white;
+}
+
+main {
+    color: white;
+}
+
+header {
+    background-color: #C1121F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 25px 0 black;
+}
+
+header nav {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left li,
+.nav-right li {
+    margin: 20px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: row; /* Agregado */
+    margin-top: 20px;
+}
+
+.info {
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 150%;
+    height: auto;
+}
+
+.ttt {
+    background-size: cover;
+    font-family: sans-serif;
+    color: white;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-info {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Media Queries para hacerlo responsivo */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Cambiar la dirección del flex a columna */
+    }
+
+    .info {
+        order: 1; /* Asegurar que .info esté primero */
+    }
+
+    .image {
+        order: 2; /* Asegurar que .image esté segundo */
+    }
+
+    .image img {
+        max-width: 100%; /* Ajustar el tamaño de la imagen */
+    }
+
+    body {
+        padding: 10px; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    header img {
+        margin-left: 10px; /* Ajustar el margen en pantallas pequeñas */
+    }
+
+    .nav-left li,
+    .nav-right li {
+        margin: 10px; /* Reducir el margen de los elementos del menú en pantallas pequeñas */
+    }
+}
+
+
+
+
+  .container {
+    --s: 1em; /* control the size */
+    --g: 10px; /* the gap */
+    --c: #ffffff; /* the active color */
+  
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: var(--g);
+    position: relative;
+  }
+  .container:before {
+    content: "";
+    position: absolute;
+    height: calc(var(--s) / 2);
+    left: calc(var(--s) / 4 + var(--_x, 0px));
+    top: calc(var(--s) / 4);
+    background: var(--c);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    transition: 0.4s, left cubic-bezier(0.1, -2000, 0.7, -2000) 0.4s;
+  }
+  .container label {
+    display: inline-flex;
+    line-height: var(--s);
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .container input {
+    height: var(--s);
+    aspect-ratio: 1;
+    border: calc(var(--s) / 8) solid var(--_c, #ffffff);
+    border-radius: 50%;
+    outline-offset: calc(var(--s) / 10);
+    padding: calc(var(--s) / 8);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    font-size: inherit;
+    margin: 0;
+    transition: 0.3s;
+  }
+  .container input:checked {
+    --_c: var(--c);
+  }
+  .container:not(:has(input:checked)):before {
+    --_i: -1;
+    opacity: 0;
+  }
+  .container:has(input:checked):before {
+    opacity: 1;
+    transform: translateY(calc(var(--_i) * (var(--s) + var(--g))));
+  }
+  .container:has(label:nth-child(1) input:checked):before {
+    --_i: 0;
+    --_x: 0.02px;
+  }
+  .container:has(label:nth-child(2) input:checked):before {
+    --_i: 1;
+    --_x: 0.04px;
+  }
+  .container:has(label:nth-child(3) input:checked):before {
+    --_i: 2;
+    --_x: 0.06px;
+  }
+  .container:has(label:nth-child(4) input:checked):before {
+    --_i: 3;
+    --_x: 0.08px;
+  }
+  .container:has(label:nth-child(5) input:checked):before {
+    --_i: 4;
+    --_x: 0.1px;
+  }
+  /* and so on ..*/
+  
+  .container input:disabled {
+    background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  @media print {
+    input[type="radio"] {
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      appearance: auto;
+      background: none;
+    }
+  }
+  @supports not selector(:has(*)) {
+    .container:before {
+      display: none;
+    }
+    .container input:checked {
+      --_c: var(--c);
+      background: var(--c) content-box;
+    }
+  }
+  
+
+  button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  button:hover {
+    letter-spacing: 3px;
+    background-color: #C1121F;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #8a0d16 0px 7px 29px 0px;
+  }
+  
+  button:active {
+    letter-spacing: 3px;
+    background-color: #C1121F;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #C1121F 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+  
+
+
