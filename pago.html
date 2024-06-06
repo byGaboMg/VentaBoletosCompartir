@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+
+<head>
+    <title>Venta de Boletos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pago.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="https://www.avalanz.com/assets/img/logos/superboletos.png">
+
+        <nav>
+            <ul class="nav-left">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fanID.html">Fan ID</a></li>
+                <li><a href="perfil.html">Boletos comprados</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+
+        <div class="container">
+            <div class="card cart">
+                <label class="title">CHECKOUT</label>
+                <div class="steps">
+                    <div class="step">
+                        <div>
+                            <span>SHIPPING</span>
+                            <p>221B Baker Street, W1U 8ED</p>
+                            <p>London, United Kingdom</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <span>PAYMENT METHOD</span>
+                            <p>Visa</p>
+                            <p>**** **** **** 4243</p>
+                        </div>
+                        <hr>
+                        <div class="promo">
+                            <span>CUENTA CON ALGÚN CÓDIGO DE PROMOCIÓN?</span>
+                            <form class="form">
+                                <input class="input_field" placeholder="Enter a Promo Code" type="text">
+                                <button>Apply</button>
+                            </form>
+                        </div>
+                        <hr>
+                        <div class="payments">
+                            <span>PAGO EVENTOS</span>
+                            <div class="details">
+                                <span>Subtotal:</span>
+                                <span>$240.00</span>
+                                <span>Shipping:</span>
+                                <span>$10.00</span>
+                                <span>Tax:</span>
+                                <span>$30.40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card checkout">
+                <div class="footer">
+                    <label class="price">$280.40</label>
+                    <form action="index.html">
+                        <button class="checkout-btn" onclick=" alert( 'Pago realizado correctamente') ">PAGAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <h3>ó, elige otro método de pago:</h3>
+
+    </div>
+
+
+
+    <div class="optionpaycontainer">
+    <br><br>
+
+    <form action="index.html">
+
+        <button class="Btn">
+            PayPal
+            <svg class="svgIcon" viewBox="0 0 576 512">
+                <path
+                    d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z">
+                </path>
+            </svg>
+        </button>
+    </form>
+
+    <br><br>
+
+    <form action="index.html">
+
+        <button class="Btn">
+            Oxxo
+            <svg class="svgIcon" viewBox="0 0 576 512">
+                <path
+                    d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z">
+                </path>
+            </svg>
+        </button>
+    </form>
+
+</div>
+
+
+    <footer>
+        <div class=" footer-info">
+            <p>&copy; 2024 Sindax VentaBoletos</p>
+            <p>Contacto: 5614349677</p>
+        </div>
+    </footer>
+</body>
+
+
+</html>
